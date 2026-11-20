@@ -1,0 +1,10 @@
+# This folder is a shared scratchpad used for many unrelated tasks.
+# Ignore everything by default; only the directorio-liveops project files are tracked.
+/*
+!.gitignore
+!equipo_liveops.html
+!fetch_avatars.py
+!avatar_datauris.json
+!avatars_small/
+!avatars_small/**
+!README.md
