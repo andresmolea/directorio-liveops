@@ -3,70 +3,26 @@
 <style>
   /* Layout: header + stat row, then grouped sections, each a responsive card grid */
   :root{
-    --bg:#f6f3ee;
-    --surface:#ffffff;
-    --surface-2:#efe9df;
-    --fg:#2a2420;
-    --muted:#746a60;
-    --accent:#e8622c;
-    --accent-ink:#ffffff;
-    --border:#e3dccf;
-    --badge-fijo:#2f6b4f;
-    --badge-fijo-bg:#e2f0e8;
-    --badge-sup:#7a4fb0;
-    --badge-sup-bg:#efe6fa;
-    --badge-esp:#1f6f8b;
-    --badge-esp-bg:#e3f1f5;
-    --badge-new1:#b4780f;
-    --badge-new1-bg:#fbf0dc;
-    --badge-new2:#b43f4f;
-    --badge-new2-bg:#fbe7ea;
-    --font-display:'Space Grotesk', system-ui, sans-serif;
-    --font-body:'Inter', system-ui, sans-serif;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#17140f;
-      --surface:#201b15;
-      --surface-2:#271f17;
-      --fg:#f2ece2;
-      --muted:#a99d8d;
-      --accent:#ef7a44;
-      --accent-ink:#1a1310;
-      --border:#352c21;
-      --badge-fijo:#8fd9b2;
-      --badge-fijo-bg:#1d3327;
-      --badge-sup:#cdabf2;
-      --badge-sup-bg:#2c2140;
-      --badge-esp:#92cfe3;
-      --badge-esp-bg:#17323c;
-      --badge-new1:#f0c472;
-      --badge-new1-bg:#3a2d12;
-      --badge-new2:#f0a0ac;
-      --badge-new2-bg:#3a1e23;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#17140f;
-    --surface:#201b15;
-    --surface-2:#271f17;
-    --fg:#f2ece2;
-    --muted:#a99d8d;
-    --accent:#ef7a44;
-    --accent-ink:#1a1310;
-    --border:#352c21;
+    --bg:#541878;
+    --surface:#6b2e95;
+    --surface-2:#431163;
+    --fg:#ffffff;
+    --muted:#c7a6de;
+    --accent:#52dca8;
+    --accent-ink:#1c2f26;
+    --border:#7a49a3;
     --badge-fijo:#8fd9b2;
     --badge-fijo-bg:#1d3327;
-    --badge-sup:#cdabf2;
-    --badge-sup-bg:#2c2140;
+    --badge-sup:#e4cdfa;
+    --badge-sup-bg:#3a1f5c;
     --badge-esp:#92cfe3;
     --badge-esp-bg:#17323c;
     --badge-new1:#f0c472;
     --badge-new1-bg:#3a2d12;
     --badge-new2:#f0a0ac;
     --badge-new2-bg:#3a1e23;
+    --font-display:'Space Grotesk', system-ui, sans-serif;
+    --font-body:'Inter', system-ui, sans-serif;
     color-scheme: dark;
   }
 
@@ -139,11 +95,7 @@
   .tabs{display:flex;gap:20px;margin-bottom:28px;border-bottom:1px solid var(--border);}
   .tab-btn{appearance:none;border:none;background:none;font-family:var(--font-body);font-weight:600;font-size:14px;color:var(--muted);padding:10px 2px;cursor:pointer;border-bottom:2px solid transparent;}
   .tab-btn.active{color:var(--fg);border-bottom-color:var(--accent);}
-  .badge.b2b{color:#2b5f8a;background:#e1ecf5;}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .badge.b2b{color:#9cc6ea;background:#172a38;}
-  }
-  :root[data-theme="dark"] .badge.b2b{color:#9cc6ea;background:#172a38;}
+  .badge.b2b{color:#9cc6ea;background:#172a38;}
 
   footer.note{color:var(--muted);font-size:12.5px;border-top:1px solid var(--border);padding-top:18px;margin-top:8px;}
 </style>
@@ -162,8 +114,9 @@
     <div class="stats">
       <div class="stat"><b>53</b><span>personas</span></div>
       <div class="stat"><b>11</b><span>contrato fijo</span></div>
-      <div class="stat"><b>35</b><span>nuevo ingreso</span></div>
       <div class="stat"><b>3</b><span>supervisores suplentes</span></div>
+      <div class="stat"><b>4</b><span>especialistas</span></div>
+      <div class="stat"><b>35</b><span>nuevo ingreso</span></div>
     </div>
   </header>
 
@@ -304,7 +257,7 @@ function initials(name){
 }
 
 function placeholder(name){
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68"><rect width="68" height="68" rx="34" fill="#e8622c"/><text x="34" y="42" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="600" fill="#fff" text-anchor="middle">${initials(name)}</text></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68"><rect width="68" height="68" rx="34" fill="#52dca8"/><text x="34" y="42" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="600" fill="#541878" text-anchor="middle">${initials(name)}</text></svg>`;
   return "data:image/svg+xml;base64," + btoa(svg);
 }
 
