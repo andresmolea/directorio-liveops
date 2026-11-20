@@ -3,6 +3,7 @@
 /*
 !.gitignore
 !equipo_liveops.html
+!index.html
 !fetch_avatars.py
 !avatar_datauris.json
 !avatars_small/
